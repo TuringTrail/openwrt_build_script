@@ -11,14 +11,8 @@ git clone https://github.com/sbwml/luci-app-xunlei package/new/luci-app-xunlei
 git clone https://github.com/sirpdboy/luci-app-lucky package/new/luci-app-lucky
 
 # OpenAppFilter
-# git clone https://github.com/destan19/OpenAppFilter package/new/OpenAppFilter
-# OpenAppFilter旧版本处理
-OFA_PATH="./feeds/packages/net/open-app-filter"
-OFA_LUCI_PATH="./feeds/luci/applications/luci-app-appfilter"
-rm -rf "$OFA_PATH"
-rm -rf "$OFA_LUCI_PATH"
-DIR="package/new"
-find "$DIR" -mindepth 1 -maxdepth 1 -type d -exec basename {} \;
+rm -rf "package/new/OpenAppFilter"
+git clone https://github.com/destan19/OpenAppFilter package/new/OpenAppFilter
 
 # 更新软件版本
 # 使用 sha256sum 校验HASH
