@@ -10,10 +10,6 @@ git clone https://github.com/sbwml/luci-app-xunlei package/new/luci-app-xunlei
 # Lucky大吉
 git clone https://github.com/sirpdboy/luci-app-lucky package/new/luci-app-lucky
 
-# OpenAppFilter
-rm -rf "package/new/OpenAppFilter"
-git clone https://github.com/destan19/OpenAppFilter package/new/OpenAppFilter
-
 # 更新软件版本
 # 使用 sha256sum 校验HASH
 
