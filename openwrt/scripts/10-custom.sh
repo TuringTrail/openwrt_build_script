@@ -9,6 +9,8 @@ git clone https://github.com/turingtrail/luci-app-syncthing package/new/luci-app
 git clone https://github.com/sbwml/luci-app-xunlei package/new/luci-app-xunlei
 # Lucky大吉
 git clone https://github.com/sirpdboy/luci-app-lucky package/new/luci-app-lucky
+#EasyTier
+git clone https://github.com/EasyTier/luci-app-easytier package/new/luci-app-easytier
 
 # 更新软件版本
 # 使用 sha256sum 校验HASH
