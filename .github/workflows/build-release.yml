@@ -115,9 +115,6 @@ jobs:
         echo "Cache Size: ~${cache_size_mb} MB (${cache_size} B)"
         echo "Cache restored successfully"
         echo "Cache restored from key: ${{ github.event.inputs.device }}"
-        
-    - name: Setup Debug Session
-      uses: csexton/debugger-action@master
     
     - name: Compile OpenWrt
       working-directory: /builder
