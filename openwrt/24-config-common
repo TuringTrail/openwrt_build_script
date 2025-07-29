@@ -129,7 +129,7 @@ CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_ariang-nginx=y
 
 ### ImmortalWrt Proxy - nft
-CONFIG_PACKAGE_luci-app-homeproxy=y
+# CONFIG_PACKAGE_luci-app-homeproxy=y
 
 ### Passwall
 CONFIG_PACKAGE_luci-app-passwall=y
