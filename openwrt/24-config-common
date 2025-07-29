@@ -333,3 +333,12 @@ CONFIG_VERSION_FILENAMES=y
 
 ### ZLIB
 CONFIG_ZLIB_OPTIMIZE_SPEED=y
+
+
+### Syncthing
+CONFIG_PACKAGE_luci-app-syncthing=y
+CONFIG_PACKAGE_luci-i18n-syncthing-zh-cn=y
+
+### EasyTier
+CONFIG_PACKAGE_easytier=y
+CONFIG_PACKAGE_luci-app-easytier=y
