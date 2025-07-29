@@ -136,7 +136,7 @@ jobs:
         bash <(curl -sS http://127.0.0.1:8080/build.sh) ${{ env.build_version }} ${{ github.event.inputs.device }}
         cd openwrt
         if [ "${{ github.event.inputs.version }}" = release ]; then
-          tags=OpenWrt-$(git describe --abbrev=0 --tags)
+          tags=OpenWrt-${{ github.event.inputs.device }}-$(git describe --abbrev=0 --tags)-$(date +"%Y%m%d%H%M")
         else
           tags=snapshot-24.10-$(git log -n 1 --date=format:"%Y%m%d" --format="%cd")-$(git log --pretty=format:"%h" -1)
         fi
