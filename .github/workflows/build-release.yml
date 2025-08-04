@@ -198,14 +198,14 @@ jobs:
           cp -a openwrt/bin/targets/rockchip/*/*.img.gz rom/
           cp -a openwrt/bin/targets/rockchip/*/*-r4s.manifest info/manifest.txt
           cp -a openwrt/bin/targets/rockchip/*/config.buildinfo info/config.buildinfo
-          cp -a openwrt/bin/targets/rockchip/*/packages/* packages/
+          cp -a openwrt/bin/packages/aarch64_generic/*/*.ipk packages/
           tar czf info/Packages.tar.gz -C packages .
           cd rom && sha256sum *gz > ../info/sha256sums.txt
         elif [ "${{ github.event.inputs.device }}" = "nanopi-r5s" ]; then
           cp -a openwrt/bin/targets/rockchip/*/*.img.gz rom/
           cp -a openwrt/bin/targets/rockchip/*/*.manifest info/manifest.txt
           cp -a openwrt/bin/targets/rockchip/*/config.buildinfo info/config.buildinfo
-          cp -a openwrt/bin/targets/rockchip/*/packages/* packages/
+          cp -a openwrt/bin/packages/aarch64_generic/*/*.ipk packages/
           tar czf info/Packages.tar.gz -C packages .
           cd rom && sha256sum *gz > ../info/sha256sums.txt
         elif [ "${{ github.event.inputs.device }}" = "x86_64" ]; then
@@ -214,14 +214,14 @@ jobs:
           cp -a openwrt/bin/targets/x86/*/*-generic-rootfs.tar.gz rom/
           cp -a openwrt/bin/targets/x86/*/*-x86-64-generic.manifest info/manifest.txt
           cp -a openwrt/bin/targets/x86/*/config.buildinfo info/config.buildinfo
-          cp -a openwrt/bin/targets/x86/*/packages/* packages/
+          cp -a openwrt/bin/packages/x86_64/*/*.ipk packages/
           tar czf info/Packages.tar.gz -C packages .
           cd rom && sha256sum *gz > ../info/sha256sums.txt
         elif [ "${{ github.event.inputs.device }}" = "netgear_r8500" ]; then
           cp -a openwrt/bin/targets/bcm53xx/generic/*-bcm53xx-generic-netgear_r8500-squashfs.chk rom/
           cp -a openwrt/bin/targets/bcm53xx/generic/*.manifest info/manifest.txt
           cp -a openwrt/bin/targets/bcm53xx/generic/config.buildinfo info/config.buildinfo
-          cp -a openwrt/bin/targets/bcm53xx/generic/packages/* packages/
+          cp -a openwrt/bin/packages/arm_cortex-a9/*/*.ipk packages/
           tar czf info/Packages.tar.gz -C packages .
           cd rom && sha256sum * > ../info/sha256sums.txt
         elif [ "${{ github.event.inputs.device }}" = "armv8" ]; then
@@ -233,7 +233,7 @@ jobs:
           cp -a openwrt/bin/targets/armsr/armv8*/*-rootfs.tar.gz rom/
           cp -a openwrt/bin/targets/armsr/armv8*/*.manifest info/manifest.txt
           cp -a openwrt/bin/targets/armsr/armv8*/config.buildinfo info/config.buildinfo
-          cp -a openwrt/bin/targets/armsr/armv8*/packages/* packages/
+          cp -a openwrt/bin/packages/aarch64_generic/*/*.ipk packages/
           tar czf info/Packages.tar.gz -C packages .
           cd rom && sha256sum * > ../info/sha256sums.txt
         fi
